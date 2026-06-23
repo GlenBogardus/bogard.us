@@ -3,29 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages Test</title>
+    <title>My GitHub Pages Project</title>
     <style>
-        body {
-            font-family: sans-serif;
+        /* This locks the page layout strictly to the screen boundaries */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden; /* Completely prevents scrolling */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Flexbox centers the card perfectly within the viewport height */
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f9;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 20px;
         }
+
+        /* The standalone content container */
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 40px;
+            max-width: 450px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             text-align: center;
+            border-top: 5px solid #24292e; /* Minimalist dark grey accent */
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #24292e;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #586069;
+            margin-bottom: 25px;
+        }
+
+        /* Clean buttons or link blocks */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-btn {
+            display: block;
+            padding: 12px;
+            background-color: #f6f8fa;
+            color: #24292e;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            border: 1px solid #e1e4e8;
+            transition: all 0.2s ease;
+        }
+
+        .link-btn:hover {
+            background-color: #24292e;
+            color: #ffffff;
+            border-color: #24292e;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Hello, Web! 🚀</h1>
-        <p>If you can see this, your GitHub Pages site is officially live.</p>
+
+    <div class="container">
+        <div class="card">
+            <h1>Project Workspace</h1>
+            <p>Welcome! This single-screen container is locked to the browser window viewport height. No scrolling required.</p>
+            
+            <div class="links-container">
+                <a href="https://github.com" target="_blank" class="link-btn">View Code Repository</a>
+                <a href="#" class="link-btn">Primary Action Link</a>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
